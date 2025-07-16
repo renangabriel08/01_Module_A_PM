@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ma/pages/home.dart';
+import 'package:ma/pages/imagem.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
-      routes: {'/home': (context) => const Home()},
+      routes: {
+        '/home': (context) => const Home(),
+        '/img': (context) => const Imagem(),
+      },
       initialRoute: '/home',
     );
   }

@@ -13,6 +13,8 @@ class App {
   static List map = [];
   static List ids = [];
 
+  static String img = '';
+
   static Map? user;
 
   static getDiarios() async {

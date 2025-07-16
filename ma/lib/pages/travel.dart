@@ -28,7 +28,7 @@ class _TravelState extends State<Travel> {
         content: SingleChildScrollView(
           child: Row(
             children: [
-              Container(
+              SizedBox(
                 width: 250,
                 child: Text(
                   local['location_introduction'],
@@ -37,15 +37,22 @@ class _TravelState extends State<Travel> {
               ),
               Column(
                 children: [
-                  Container(
-                    width: 200,
-                    height: 200,
-                    child: Image.asset(
-                      'assets/images/location_image/${local['location_scene_image']}',
-                      fit: BoxFit.cover,
+                  GestureDetector(
+                    onTap: () {
+                      App.img =
+                          'assets/images/location_image/${local['location_scene_image']}';
+                      Navigator.pushNamed(context, '/img');
+                    },
+                    child: SizedBox(
+                      width: 200,
+                      height: 200,
+                      child: Image.asset(
+                        'assets/images/location_image/${local['location_scene_image']}',
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: 200,
                     height: 200,
                     child: Image.asset(
